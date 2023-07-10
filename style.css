@@ -9,7 +9,16 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 /*reset end*/
+
+:root {
+    --primary: #2F4F4F;
+    --primary-light: #7CA982;
+    --title-color: var(--primary-light);
+    --text-color: #FDE8E9;
+    --accent-color: #9B7EDE;
+}
 
 
 html {
@@ -18,11 +27,46 @@ html {
 
 body {
     font-family: 'Rubik', serif;
-    color: wheat;
-    background-color: darkslategray;
+    color: var(--title-color);
+    background-color: #1e1d1d;
     font-size: 1.5rem;
+}
+
+
+/*p {*/
+/*    line-height: 1.5;*/
+/*}*/
+
+.cv__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 2rem;
+}
+
+.title {
+
+}
+
+.profile {
+    display: flex;
+    gap: 2em;
+    background-color: var(--primary);
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+.profile > img {
+    --size: 400px;
+    height: var(--size);
+    width: var(--size);
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 p {
     line-height: 1.5;
+    color: var(--text-color);
 }
