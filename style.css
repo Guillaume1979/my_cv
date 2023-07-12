@@ -10,6 +10,10 @@ a {
     color: inherit;
 }
 
+li {
+    list-style: none;
+}
+
 /*reset end*/
 
 :root {
@@ -27,15 +31,18 @@ html {
 
 body {
     font-family: 'Rubik', serif;
-    color: var(--title-color);
+    color: var(--text-color);
     background-color: #1e1d1d;
     font-size: 1.5rem;
 }
 
+h1, h2 {
+    color: var(--title-color);
+}
 
-/*p {*/
-/*    line-height: 1.5;*/
-/*}*/
+.title {
+    margin-block: 3rem;
+}
 
 .cv__container {
     display: flex;
@@ -44,19 +51,30 @@ body {
     justify-content: center;
     gap: 2em;
     padding: 2rem;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
-.title {
-
-}
-
-.profile {
+.thumbnail {
     display: flex;
     gap: 2em;
     background-color: var(--primary);
-    padding: 1.5rem;
+    padding: 1.5rem 5rem 1.5rem;
     border-radius: 20px;
+    margin-top: 1em;
+    /*width: clamp(800px, 80%, 900px);*/
+  /*width: 800px;*/
+    /*max-width: 1000px;*/
 }
+.thumbnail:nth-child(even) {
+    align-self: flex-start;
+}
+
+.thumbnail:nth-child(odd) {
+   align-self: flex-end;
+}
+
+.profile {}
 
 .profile > img {
     --size: 400px;
@@ -66,7 +84,37 @@ body {
     border-radius: 50%;
 }
 
+.profile__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 2em;
+}
+
+.profile__detail > span:first-child {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+
+.profile__detail > span a {
+    color: var(--accent-color);
+}
+
 p {
     line-height: 1.5;
     color: var(--text-color);
+}
+
+.skills {
+    flex-direction: column;
+}
+
+.skills__group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.pro-exp {
+    flex-direction: column;
 }
