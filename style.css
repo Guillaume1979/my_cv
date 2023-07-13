@@ -12,7 +12,6 @@ a {
 
 li {
     list-style: none;
-    /*list-style-type: "-> ";*/
 }
 
 /*reset end*/
@@ -68,6 +67,11 @@ h1, h2, h3 {
     /*max-width: 1000px;*/
 }
 
+.thumbnail h2 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
 .thumbnail:nth-child(even) {
     align-self: flex-start;
 }
@@ -86,7 +90,7 @@ h1, h2, h3 {
 .profile {}
 
 .profile > img {
-    --size: 400px;
+    --size: 300px;
     height: var(--size);
     width: var(--size);
     object-fit: cover;
@@ -107,6 +111,12 @@ h1, h2, h3 {
 
 .profile__detail > span a {
     color: var(--accent-color);
+}
+
+.profile q {
+    font-size: 1.7rem;
+    font-style: italic;
+    padding-top: 1em;
 }
 
 p {
