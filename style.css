@@ -201,6 +201,7 @@ p {
 
 .experience__items>li>ul>li {
     list-style-type: square;
+    font-size: 1.3rem;
 }
 
 @media screen and (max-width: 1050px) {
