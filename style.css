@@ -152,7 +152,7 @@ p {
     color: #1e1d1d;
 }
 
-.experience {
+.experience, .school {
     flex-direction: column;
 }
 
@@ -202,6 +202,16 @@ p {
 .experience__items>li>ul>li {
     list-style-type: square;
     font-size: 1.3rem;
+}
+
+.school {
+    gap: 0.5em;
+}
+
+.school > div {
+    display: grid;
+    gap: 2.5em;
+    grid-template-columns: 80px 1.5fr;
 }
 
 @media screen and (max-width: 1050px) {
