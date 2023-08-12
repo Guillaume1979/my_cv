@@ -226,4 +226,15 @@ p {
     .thumbnail:nth-child(odd) {
         align-self: auto;
     }
+
+    .experience > div {
+        grid-template-columns: 1fr;
+    }
+
+    .experience__company {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 2em;
+    }
 }
