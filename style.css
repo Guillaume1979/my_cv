@@ -67,7 +67,8 @@ h1, h2, h3 {
 
 .thumbnail h2 {
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 500;
+    text-align: center;
 }
 
 .thumbnail:nth-child(even) {
@@ -116,7 +117,7 @@ p {
     color: var(--text-color);
 }
 
-.skills {
+.skills, .experience, .school {
     flex-direction: column;
 }
 
@@ -152,10 +153,6 @@ p {
     color: #1e1d1d;
 }
 
-.experience, .school {
-    flex-direction: column;
-}
-
 .experience > div {
     display: grid;
     gap: 2.5em;
@@ -169,7 +166,7 @@ p {
 
 .company__name {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .company__years {
@@ -179,11 +176,12 @@ p {
 .experience__detail {
     display: flex;
     flex-direction: column;
-    gap: 0.3em;
+    gap: 0.5em;
 }
 
 .experience__detail > span {
     font-size: 1.8rem;
+    font-weight: 500;
 }
 
 .experience__items {
@@ -219,11 +217,7 @@ p {
         width: 80dvw;
     }
 
-    .thumbnail:nth-child(even) {
-        align-self: auto;
-    }
-
-    .thumbnail:nth-child(odd) {
+    .thumbnail:nth-child(even), .thumbnail:nth-child(odd) {
         align-self: auto;
     }
 
@@ -240,13 +234,57 @@ p {
 }
 
 @media screen and (max-width: 800px) {
+/*todo : à revoir si besoin*/
+    html {
+        /*font-size: 60%;*/
+    }
+
+    h1 {
+        text-align: center;
+    }
+
     .thumbnail {
         flex-direction: column;
-        align-items: center;
         padding: 1.5rem 2rem 1.5rem;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .profile {
+        align-items: center;
     }
 
     .profile > img {
        --size: 200px;
+    }
+
+    .skills {
+        align-items: center;
+    }
+
+    .skills__group {
+        grid-template-columns: 1fr;
+    }
+
+    .experience {
+        gap: 1em;
+    }
+
+    .experience > div {
+        gap: 1em;
+    }
+
+    .experience__company {
+        flex-direction: column;
+        gap: 0.5em;
+        background-color: var(--primary-light);
+        padding: 1.5rem 2.5rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .school {
+        gap: 1em;
     }
 }
