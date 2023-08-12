@@ -238,3 +238,15 @@ p {
         gap: 2em;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .thumbnail {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 2rem 1.5rem;
+    }
+
+    .profile > img {
+       --size: 200px;
+    }
+}
