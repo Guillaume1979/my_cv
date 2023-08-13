@@ -212,7 +212,7 @@ p {
     grid-template-columns: 80px 1.5fr;
 }
 
-@media only screen and (max-width: 1050px) {
+@media screen and (max-width: 1050px) {
     .thumbnail {
         width: 80dvw;
     }
@@ -231,8 +231,13 @@ p {
         align-items: baseline;
         gap: 2em;
     }
+}
 
-    /* AJOUT */
+@media only screen and (max-width: 800px) {
+/*todo : à revoir si besoin*/
+    html {
+        /*font-size: 60%;*/
+    }
 
     h1 {
         text-align: center;
@@ -253,7 +258,7 @@ p {
     }
 
     .profile > img {
-        --size: 200px;
+       --size: 200px;
     }
 
     .skills {
@@ -280,64 +285,11 @@ p {
         border-radius: 20px;
     }
 
+    .experience__detail > span {
+        color: var(--title-color);
+    }
+
     .school {
         gap: 1em;
     }
 }
-
-/*@media only screen and (max-width: 800px) {*/
-/*!*todo : à revoir si besoin*!*/
-/*    html {*/
-/*        !*font-size: 60%;*!*/
-/*    }*/
-
-/*    h1 {*/
-/*        text-align: center;*/
-/*    }*/
-
-/*    .thumbnail {*/
-/*        flex-direction: column;*/
-/*        padding: 1.5rem 2rem 1.5rem;*/
-/*        width: 90dvw;*/
-/*    }*/
-
-/*    hr {*/
-/*        display: none;*/
-/*    }*/
-
-/*    .profile {*/
-/*        align-items: center;*/
-/*    }*/
-
-/*    .profile > img {*/
-/*       --size: 200px;*/
-/*    }*/
-
-/*    .skills {*/
-/*        align-items: center;*/
-/*    }*/
-
-/*    .skills__group {*/
-/*        grid-template-columns: 1fr;*/
-/*    }*/
-
-/*    .experience {*/
-/*        gap: 1em;*/
-/*    }*/
-
-/*    .experience > div {*/
-/*        gap: 1em;*/
-/*    }*/
-
-/*    .experience__company {*/
-/*        flex-direction: column;*/
-/*        gap: 0.5em;*/
-/*        background-color: var(--primary-light);*/
-/*        padding: 1.5rem 2.5rem 1.5rem;*/
-/*        border-radius: 20px;*/
-/*    }*/
-
-/*    .school {*/
-/*        gap: 1em;*/
-/*    }*/
-/*}*/
