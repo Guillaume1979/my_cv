@@ -234,13 +234,16 @@ p {
 }
 
 @media only screen and (max-width: 800px) {
-/*todo : à revoir si besoin*/
     html {
         font-size: 70%;
     }
 
     h1 {
         text-align: center;
+    }
+
+    .title {
+        margin-block: 0;
     }
 
     .thumbnail {
