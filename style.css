@@ -236,7 +236,7 @@ p {
 @media only screen and (max-width: 800px) {
 /*todo : à revoir si besoin*/
     html {
-        /*font-size: 60%;*/
+        font-size: 70%;
     }
 
     h1 {
@@ -290,6 +290,10 @@ p {
     }
 
     .school {
+        gap: 1em;
+    }
+
+    .school > div {
         gap: 1em;
     }
 }
