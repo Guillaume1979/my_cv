@@ -37,11 +37,21 @@
 }
 
 
-/*reset start*/
+/*RESET start*/
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    min-height: 100dvh;
 }
 
 a {
@@ -53,7 +63,9 @@ li {
     list-style: none;
 }
 
-/*reset end*/
+
+
+/*RESET end*/
 
 :root {
     --primary: #2F4F4F;
@@ -79,263 +91,35 @@ h1, h2, h3 {
     color: var(--title-color);
 }
 
-.title {
-    margin-block: 3rem;
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .cv__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2em;
-    padding: 2rem;
-    margin: 0 auto;
-    max-width: 1400px;
+    padding: 1rem;
+    gap: 1rem;
 }
 
-.thumbnail {
-    display: flex;
-    gap: 2em;
-    background-color: var(--primary);
-    padding: 1.5rem 5rem 1.5rem;
-    border-radius: 20px;
-    margin-top: 1em;
-    width: 1000px;
-}
-
-.thumbnail h2 {
-    font-size: 3rem;
-    font-weight: 500;
+.cv__container h1 {
     text-align: center;
 }
 
-.thumbnail:nth-child(even) {
-    align-self: flex-start;
-}
-
-.thumbnail:nth-child(odd) {
-    align-self: flex-end;
-}
-
-.profile {
+.thumbnail {
+    background-color: var(--primary);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .profile > img {
-    --size: 300px;
-    height: var(--size);
+    --size: 200px;
     width: var(--size);
     object-fit: cover;
     border-radius: 50%;
 }
 
-.profile__detail {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    margin-top: 2em;
-}
 
-.profile__detail > span:first-child {
-    text-transform: capitalize;
-    font-size: 2.5rem;
-}
-
-.profile__detail > span a {
-    color: var(--accent-color);
-}
-
-.profile q {
-    font-size: 1.7rem;
-    font-style: italic;
-    padding-top: 1em;
-}
-
-p {
-    line-height: 1.5;
-    color: var(--text-color);
-}
-
-.skills, .experience, .school {
-    flex-direction: column;
-}
-
-.skills h3 {
-    margin-bottom: 1em;
-}
-
-.office {
-    margin-bottom: 1em;
-}
-
-.languages {
-    margin-top: 1em;
-}
-
-.skills__group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5dvw;
-}
-
-.skills__detail {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-}
-
-.skills__detail li {
-    background-color: var(--primary-light);
-    border-radius: 150px;
-    text-align: center;
-    margin-bottom: 0.2em;
-    color: #1e1d1d;
-}
-
-.experience > div {
-    display: grid;
-    gap: 2.5em;
-    grid-template-columns: 300px 1.5fr;
-}
-
-.experience__company {
-    display: flex;
-    flex-direction: column;
-}
-
-.company__name {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.company__years {
-    font-style: italic;
-}
-
-.experience__detail {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
-.experience__detail > span {
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-.experience__items {
-    padding-left: 1.5em;
-}
-
-.experience__items>li {
-    list-style-type: disc;
-    padding-top: 0.2em;
-}
-
-.experience__items>li>ul {
-    padding-left: 1em;
-}
-
-.experience__items>li>ul>li {
-    list-style-type: square;
-    font-size: 1.3rem;
-}
-
-.school {
-    gap: 0.5em;
-}
-
-.school > div {
-    display: grid;
-    gap: 2.5em;
-    grid-template-columns: 80px 1.5fr;
-}
-
-@media screen and (max-width: 1050px) {
-    .thumbnail {
-        width: 80dvw;
-    }
-
-    .thumbnail:nth-child(even), .thumbnail:nth-child(odd) {
-        align-self: auto;
-    }
-
-    .experience > div {
-        grid-template-columns: 1fr;
-    }
-
-    .experience__company {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 2em;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    html {
-        font-size: 70%;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-    .title {
-        margin-block: 0;
-    }
-
-    .thumbnail {
-        flex-direction: column;
-        padding: 1.5rem 2rem 1.5rem;
-        width: 90dvw;
-    }
-
-    hr {
-        display: none;
-    }
-
-    .profile {
-        align-items: center;
-    }
-
-    .profile > img {
-       --size: 200px;
-    }
-
-    .skills {
-        align-items: center;
-    }
-
-    .skills__group {
-        grid-template-columns: 1fr;
-    }
-
-    .experience {
-        gap: 1em;
-    }
-
-    .experience > div {
-        gap: 1em;
-    }
-
-    .experience__company {
-        flex-direction: column;
-        gap: 0.5em;
-        background-color: var(--primary-light);
-        padding: 1.5rem 2.5rem 1.5rem;
-        border-radius: 20px;
-    }
-
-    .experience__detail > span {
-        color: var(--title-color);
-    }
-
-    .school {
-        gap: 1em;
-    }
-
-    .school > div {
-        gap: 1em;
-    }
-}
