@@ -220,7 +220,8 @@ p {
     font-weight: 500;
 }
 
-.role__detail {}
+.role__detail {
+}
 
 .company-name {
     font-weight: 500;
@@ -271,4 +272,14 @@ b {
     color: var(--primary-light);
 }
 
+@media screen and (min-width: 800px) {
+    .profile {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2rem;
+    }
 
+    .profile > img {
+        --size: 300px;
+    }
+}
