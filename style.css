@@ -85,6 +85,8 @@ body {
     color: var(--text-color);
     background-color: #1e1d1d;
     font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -101,11 +103,16 @@ p {
 }
 
 .cv__container {
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     gap: 1rem;
+
+    --max-width: 1200px;
+    min-width: min(100%, var(--max-width));
+    max-width: var(--max-width);
 }
 
 .cv__container h1 {
@@ -350,6 +357,21 @@ b {
     .job__years {
         font-size: 0.9em;
     }
+}
 
+@media screen and (min-width: 1200px)  {
+    .thumbnail {
+        --width: 1000px;
+        min-width: var(--width);
+        max-width: var(--width);
+        align-items: center;
+    }
 
+    .thumbnail:nth-child(even){
+        align-self: flex-start;
+    }
+
+    .thumbnail:nth-child(odd){
+        align-self: flex-end;
+    }
 }
