@@ -290,6 +290,7 @@ hr {
     display: grid;
     gap: 0.3em;
     grid-template-columns: 1fr;
+    min-width: 100%;
 }
 
 .school-years {
@@ -349,4 +350,6 @@ b {
     .job__years {
         font-size: 0.9em;
     }
+
+
 }
