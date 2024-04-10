@@ -96,6 +96,7 @@ h1, h2, h3 {
 h1 {
     font-size: 3rem;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 p {
@@ -373,5 +374,46 @@ b {
 
     .thumbnail:nth-child(odd){
         align-self: flex-end;
+    }
+}
+
+#mail {
+    position: relative;
+    cursor: pointer;
+}
+
+#mail svg {
+    width: 12px;
+    position: absolute;
+    top: -5px;
+    right: -13px;
+}
+
+.hint::after {
+    content: "copié";
+    position: absolute;
+    right: -52px;
+    top: -10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 85%;
+    color: #422b73;
+    background-color: var(--primary-light);
+    animation: appear 1s ease-in forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
